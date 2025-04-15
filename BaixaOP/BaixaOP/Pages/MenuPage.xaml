@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="clr-namespace:SeparacaoFilial.Pages;assembly=SeparacaoFilial"
+            x:Class="SeparacaoFilial.Pages.MenuPage">
+
+    <ContentView ControlTemplate="{StaticResource TemplateBaldanColetor}">
+
+        <Grid Margin="30,70,30,0">
+            <Grid Margin="0,-25,0,0" RowSpacing="0" ColumnSpacing="0">
+                <StackLayout Grid.Column="0"/>
+                <Label Grid.Column="1" Text="Usuário:" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="#606163" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Text="{Binding LabelUsuario}" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="#ED1C22" FontAttributes="Bold"/>
+                <StackLayout Grid.Column="3"/>
+            </Grid>
+
+            <StackLayout Margin="0,25,0,0">
+                <Label Text="Selecione a operação desejada:" HorizontalOptions="Center" FontSize="16" TextColor="#606163"/>
+            </StackLayout>
+
+            <Grid Margin="0,0,0,20">
+                <Button Margin="0,0,0,10" Grid.Row ="1" x:Name="btnBaixarOP" Text="Separação OP" BackgroundColor="#ED1C22" TextColor="White" FontSize="16"
+                        Clicked="BtnBaixarOPClicked" />
+                <Button Margin="0,0,0,10" Grid.Row ="2" x:Name="btnBaixarOPAlmoxarifado" Text="Gerar Acessório" BackgroundColor="#ED1C22" TextColor="White" FontSize="16"
+                        Clicked="BtnBaixarOPAlmoxarifadoClicked"/>
+            </Grid>
+        </Grid>
+
+    </ContentView>
+
+</d:BasePage>

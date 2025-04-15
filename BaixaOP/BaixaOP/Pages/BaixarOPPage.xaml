@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="clr-namespace:SeparacaoFilial.Pages;assembly=SeparacaoFilial"
+            x:Class="SeparacaoFilial.Pages.BaixarOPPage">
+
+    <ContentView ControlTemplate="{StaticResource TemplateBaldanColetor}">
+
+        <Grid Margin="0,0,0,0">
+            <Grid Grid.Row="0" Margin="-10,0,0,-10" RowSpacing="0" ColumnSpacing="0">
+                <StackLayout Grid.Column="0"/>
+                <Label Grid.Column="1" Text="Usuário:" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="#606163" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Text="{Binding LabelUsuario}" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="#ED1C22" FontAttributes="Bold"/>
+                <StackLayout Grid.Column="3"/>
+            </Grid>
+
+            <Grid Grid.Row="1" x:Name="grdCodigoBarras" Margin="16,-100,26,20" VerticalOptions="Center">
+                <Label Grid.Column="0" Margin="1,-20,0,0" Text="Código de Barras da OP:" FontSize="16" VerticalOptions="CenterAndExpand" TextColor="#606163"/>
+                <Entry Grid.Column="1" Grid.ColumnSpan="2" Margin="-5,0,-5,0" x:Name="txtCodigoBarrasOp" FontSize="16" TextColor="#ED1C22" HorizontalTextAlignment="Center"
+                       Completed="TxtCodigoBarrasOpOnEnterKeyPressed"/>
+            </Grid>
+
+            <Grid Grid.Row="2" x:Name="grdQuantidade" Margin="16,-190,16,0" VerticalOptions="Center" RowSpacing="0" ColumnSpacing="0">
+                <Label Grid.Column="0" Text="Quantidade:" x:Name="lblQuantidade" VerticalOptions="CenterAndExpand" FontSize="16" TextColor="#606163"/>
+                <Entry Grid.Column="1" x:Name="txtQuantidade" FontSize="16" TextColor="#ED1C22" HorizontalTextAlignment="Center" 
+                       Keyboard="Numeric" Completed="TxtQuantidadeOnEnterKeyPressed"/>
+                <StackLayout Grid.Column="2"/>
+            </Grid>
+
+            <Grid Grid.Row ="3" Margin="20,0,20,20" >
+                <Button Margin="0,0,0,0" x:Name="btnFinalizar" Text="Finalizar Separação" BackgroundColor="#ED1C22" TextColor="White" FontSize="16"
+                        Clicked="BtnFinalizarClicked"/>
+            </Grid>
+        </Grid>
+
+    </ContentView>
+
+</d:BasePage>

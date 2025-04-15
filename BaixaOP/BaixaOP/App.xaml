@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeparacaoFilial.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- Template comum para todas as páginas -->
+            <ControlTemplate x:Key="TemplateBaldanColetor">
+                <StackLayout BackgroundColor="#ffffff">
+                    <Grid Grid.Row="0" HorizontalOptions="Center">
+                        <Image Grid.Row="1" Source="logoBaldan.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
+                        <Label Grid.Row="2" Margin="0,28,0,0" Text="Sistema de Separação" HorizontalOptions="CenterAndExpand" FontSize="22" FontAttributes="Bold" TextColor="#606163"/>
+                    </Grid>
+
+                    <!-- Conteúdo de cada página -->
+                    <ContentPresenter VerticalOptions="FillAndExpand"/>
+
+                    <StackLayout Grid.Row="1" Margin="0,0,0,16">
+                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                        <Label Margin="0,8,0,0" Text="Baldan Implementos Agrícolas S/A" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </ControlTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

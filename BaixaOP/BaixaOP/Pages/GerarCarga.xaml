@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="clr-namespace:SeparacaoFilial.Pages;assembly=SeparacaoFilial"
+            x:Class="SeparacaoFilial.Pages.GerarCarga">
+
+    <ContentView ControlTemplate="{StaticResource TemplateBaldanColetor}">
+
+        <Grid Grid.Row ="0" Margin="30,10,30,0" >
+            <Button Margin="0,0,0,10" x:Name="btnGerarCarga" Text="Gerar Carga" BackgroundColor="#ED1C22" TextColor="White" FontSize="16"
+                        Clicked="BtnGerarCargaClicked" />
+            
+            <Entry Grid.Row="1" Margin="0,10,0,15" x:Name="txtCarga" Placeholder="Carga" PlaceholderColor="#bababa" FontSize="18" TextColor="#606163"
+                   IsPassword="true" Completed="TxtCargaOnEnterKeyPressed"/>
+
+            <Button Grid.Row="3" Margin="0,0,0,0" x:Name="btnSeparar" Text="Separação" BackgroundColor="#ED1C22" FontSize="16" TextColor="White" 
+                    HeightRequest="70" VerticalOptions="Start" Clicked="BtnSepararClicked"/>
+
+        </Grid>
+
+    </ContentView>
+
+</d:BasePage>

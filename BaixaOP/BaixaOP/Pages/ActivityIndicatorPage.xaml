@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 x:Class="SeparacaoFilial.Pages.ActivityIndicatorPage"
+                 CloseWhenBackgroundIsClicked="False">
+
+    <!-- Popup do indicador de carregamento -->
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="Center">
+            <ActivityIndicator IsRunning="True" Color="#ED1C22"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</pages:PopupPage>

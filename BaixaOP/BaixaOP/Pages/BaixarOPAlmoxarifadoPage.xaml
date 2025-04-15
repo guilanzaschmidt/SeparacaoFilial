@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="clr-namespace:SeparacaoFilial.Pages;assembly=SeparacaoFilial"
+            x:Class="SeparacaoFilial.Pages.BaixarOPAlmoxarifadoPage">
+
+    <ContentView ControlTemplate="{StaticResource TemplateBaldanColetor}">
+
+        <Grid>
+            <Grid Grid.Row="0" Margin="30,46,30,0" RowSpacing="0" ColumnSpacing="0">
+                <StackLayout Grid.Column="0"/>
+                <Label Grid.Column="1" Text="Usuário:" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="#606163" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Text="{Binding LabelUsuario}" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="#ED1C22" FontAttributes="Bold"/>
+                <StackLayout Grid.Column="3"/>
+            </Grid>
+
+            <StackLayout Margin="30,97,30,0">
+                <Label Margin="0,7,0,0" x:Name="lblResultado" Text="{Binding LabelResultado}" TextColor="#ED1C22" FontSize="16" FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" IsVisible="true"/>
+            </StackLayout>            
+            
+            <StackLayout Margin="8,100,8,0">
+                <Label Text="Código de Barras da Etiqueta:" FontSize="16" HorizontalTextAlignment="Center" TextColor="#606163"/>
+                <Entry Margin="0,-2,0,0" x:Name="txtCodigoBarrasOp" FontSize="16" HorizontalTextAlignment="Center" TextColor="#ED1C22"
+                       Keyboard="Numeric" Completed="TxtCodigoBarrasOpOnEnterKeyPressed"/>
+            </StackLayout>
+
+            <StackLayout Margin="10,180,10,0">
+                <Grid VerticalOptions="Center" RowSpacing="0" ColumnSpacing="0">
+                    <StackLayout Grid.Column="0"/>
+                    <Label Grid.Column="1" Text="Quantidade:" VerticalOptions="CenterAndExpand" FontSize="16" TextColor="#606163"/>
+                    <Entry Grid.Column="2" x:Name="txtQuantidade" FontSize="16" TextColor="#ED1C22" HorizontalTextAlignment="Center" 
+                       Keyboard="Numeric" MaxLength="4" Completed="TxtQuantidadeOnEnterKeyPressed"/>
+                    <StackLayout Grid.Column="3"/>
+                </Grid>
+
+                <Grid Grid.Row ="1" Margin="0,30,0,0" HeightRequest="120" WidthRequest="120">
+                    <Button Margin="20" x:Name="btnFinalizar" Text="Finalizar Acessório" BackgroundColor="#ED1C22" TextColor="White" FontSize="16"
+                        Clicked="BtnFinalizarClicked"/>
+                </Grid>
+            </StackLayout>
+            
+        </Grid>
+
+    </ContentView>
+
+</d:BasePage>

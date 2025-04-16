@@ -87,7 +87,7 @@ namespace SeparacaoFilial.Pages
                 Filial = pckFilial.Items[pckFilial.SelectedIndex].EndsWith("1") ? "1" : "2"
             };
 
-            var resultado = SIDService.ValidarCredenciaisUsuario(Constantes.DNS_SERVIDOR_OFICIAL, usuario.Usuario, usuario.Senha);
+            var resultado = SIDService.ValidarCredenciaisUsuario(Constantes.DNS_SERVIDOR_TESTES, usuario.Usuario, usuario.Senha);
             //var resultado = "tt";
             var posicao = resultado.ToUpper().IndexOf("ERR");
             //var posicao = -1;
@@ -95,7 +95,7 @@ namespace SeparacaoFilial.Pages
 
             if (posicao != -1)
             {
-                await DisplayAlert("Erro!", "Não foi possível conectar ao servidor " + Constantes.DNS_SERVIDOR_OFICIAL + ". " +
+                await DisplayAlert("Erro!", "Não foi possível conectar ao servidor " + Constantes.DNS_SERVIDOR_TESTES + ". " +
                     resultado, "OK");
 
                 LimparCampos();

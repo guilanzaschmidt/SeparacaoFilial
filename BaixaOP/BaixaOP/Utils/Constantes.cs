@@ -8,7 +8,7 @@
 
         internal const string IP_SERVIDOR_TESTES = "10.1.0.62"; //10.1.0.62 Teste 64 / 10.1.0.209 Servidor Teste XT
         internal const string IP_SERVIDOR_OFICIAL = "10.1.0.83";
-        //internal const string IP_SERVIDOR_OFICIAL = "10.3.2.30";
+        //internal const string IP_SERVIDOR_OFICIAL = "10.3.2.30"; comentário Felipe teste repositório
 
         internal const int REGRA_FUNCAO_AUX_TED_CONTROL = 118;
         internal const int REGRA_TED_CONTROL_OPS = 799;
